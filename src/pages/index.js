@@ -9,12 +9,13 @@ export default ({data}) => (
   <Layout>
     <SEO title="Home" />
     {
-      data.allMarkdownRemark.edges.map(node => {
+      data.allMarkdownRemark.edges.map(({node}) => {
         return(
-          <div key={node.node.frontmatter.title}>
-            <h3>{node.node.frontmatter.title}</h3>
-            <span>{node.node.frontmatter.date}</span>
-            <p>{node.node.excerpt}</p>
+          <div key={node.id}>
+            <h3>{node.frontmatter.title}</h3>
+            <span>{node.frontmatter.date}</span>
+            <p>{node.excerpt}</p>
+            <a href={node.fields.slug}>Read more</a>
           </div>
         )
       })
@@ -26,7 +27,7 @@ export default ({data}) => (
 
 export const query = graphql`
   query  {
-    allMarkdownRemark {
+    allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}){
       edges {
         node {
           id
@@ -35,6 +36,9 @@ export const query = graphql`
             date
             description
             title
+          }
+          fields {
+            slug
           }
         }
       }
