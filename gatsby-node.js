@@ -21,3 +21,30 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         })
     }
 }
+
+
+exports.createPages = ({graphql, actions}) => {
+    const { createPage } = actions
+    // the query returns a promise
+    return graphql(`
+    {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `)
+    .then(result => {
+        result.data.allMarkdownRemark.edges.forEach(({node}) => {
+            createPage({
+                path: node.fields.slug,
+                component:
+            })
+        });
+    })
+}
