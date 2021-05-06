@@ -5,8 +5,9 @@
  */
 
 // node is a representation of each file
-const {createFilePath} = require(`gatsby-source-filesystem`)
 const path = require(`path`); // path comes with gatsby-node by default
+const {createFilePath} = require(`gatsby-source-filesystem`)
+
 //getNode: fetch node, get them
 exports.onCreateNode = ({node, getNode, actions}) => {
     const {createNodeField} = actions
@@ -22,7 +23,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     }
 }
 
-
+// when create a page, it will call graphql, use all the markdown remark
 exports.createPages = ({graphql, actions}) => {
     const { createPage } = actions
     // the query returns a promise
@@ -39,10 +40,11 @@ exports.createPages = ({graphql, actions}) => {
         }
       }
     `)
-    .then(result => {
+    .then(result => { // loop through all the markdown files
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
             createPage({
                 path: node.fields.slug,
+                // manually create the page using blog-post template
                 component: path.resolve(`./src/templates/blog-post.js`),
                 context: {
                     slug: node.fields.slug
