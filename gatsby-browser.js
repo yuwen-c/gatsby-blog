@@ -8,4 +8,4 @@
 import "@fontsource/eb-garamond" // Defaults to weight 400 with all styles included.
 import "@fontsource/eb-garamond/700.css" // Weight 500 with all styles included.
 // https://fonts.google.com/specimen/EB+Garamond
-//https://github.com/fontsource/fontsource/tree/main/packages/eb-garamond
+// https://github.com/fontsource/fontsource/tree/main/packages/eb-garamond
