@@ -1,32 +1,38 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import avatar from "../images/githubAvatar.jpg";
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#765D69`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div
+    <div className="pv3"
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#8FB9A8`,
             textDecoration: `none`,
           }}
         >
           {siteTitle}
         </Link>
       </h1>
+    </div>
+    <div class="pb3">
+      <img
+      src={avatar}
+      class="br-100 h3 w3 " alt="avatar">
+      </img>
     </div>
   </header>
 )
