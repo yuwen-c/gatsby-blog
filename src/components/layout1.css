@@ -2,6 +2,7 @@
 
 body{
     background: #765D69;
-    font-family: "EB Garamond";
+    font-family:  "EB Garamond", "Noto Serif TC";
+    
     height: 100vh;
 }

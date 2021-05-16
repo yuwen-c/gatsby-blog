@@ -28,6 +28,7 @@ export default ({data}) => (
             <BlogTitle>{node.frontmatter.title}</BlogTitle>
             </BlogLink>
             <span>{node.frontmatter.date}</span>
+            <p>{node.frontmatter.description}</p>
             <p>{node.excerpt}</p>
             <a href={node.fields.slug}>Read more</a>
           </div>

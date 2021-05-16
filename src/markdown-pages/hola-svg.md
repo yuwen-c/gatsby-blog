@@ -1,9 +1,10 @@
 ---
 title: "hola svg，好用的svg工具"
 date: "2021-04-10"
+description: "有些 icon 來讓使用者看到，易理解，然後去操作"
 ---
 
-### hola svg，好用的svg工具.
+<!-- ### hola svg，好用的svg工具. -->
 
 在做project的時候，需要有些 icon 來讓使用者看到，易理解，然後去操作，例如箭頭、下一頁等等。這種時候用svg就非常適合，可以很容易修改顏色、大小，去符合我們要的格式。
 
@@ -15,7 +16,7 @@ date: "2021-04-10"
 
 來看一下我用過的"add sign"加號圖形：
 
-```jsx
+```
 <svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
 	<circle cx="50" cy="50" r="40"/> 
 	<line x1="35" y1="50" x2="65" y2="50" /> 
@@ -27,7 +28,7 @@ date: "2021-04-10"
 
 我把它用在我的專案裡面：
 
-```jsx
+```
 <div className="w-10 ml3">
 	<svg className="grow"
    fill='none' stroke='#555555' strokeWidth='10' strokeDashoffset='194' strokeDasharray='0' strokeLinecap='round' strokeLinejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'
