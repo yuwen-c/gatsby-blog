@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import tachyons from "tachyons"
 
 // make the blog link, (allow our link title clickable)
 // if apply the <Link> directly to title, it'll show the underline...a tag style, ugly
