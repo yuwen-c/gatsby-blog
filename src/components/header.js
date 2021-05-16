@@ -22,16 +22,17 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `#8FB9A8`,
             textDecoration: `none`,
+            fontWeight: `700`,
           }}
         >
           {siteTitle}
         </Link>
       </h1>
     </div>
-    <div class="pb3">
+    <div className="pb3">
       <img
       src={avatar}
-      class="br-100 h3 w3 " alt="avatar">
+      className="br-100 h3 w3 " alt="avatar">
       </img>
     </div>
   </header>
