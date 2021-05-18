@@ -12,7 +12,7 @@ const BlogLink = styled(Link)`
   text-decoration: none;
 `
 
-const BlogTitle = styled.h3`
+const BlogTitle = styled.h1`
   margin-top: 20px;
   color: #8FB9A8;
 `
@@ -28,9 +28,8 @@ export default ({data}) => (
             <BlogTitle>{node.frontmatter.title}</BlogTitle>
             </BlogLink>
             <span>{node.frontmatter.date}</span>
-            <p>{node.frontmatter.description}</p>
-            <p>{node.excerpt}</p>
-            <a href={node.fields.slug}>Read more</a>
+            <p className="lh-copy">{node.frontmatter.description}</p>
+            {/* <p>{node.excerpt}</p> */}
           </div>
         )
       })

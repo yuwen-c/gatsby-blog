@@ -1,16 +1,18 @@
 ---
-title: "hola svg，好用的svg工具"
+title: "HOLA SVG，好用的SVG工具"
 date: "2021-04-10"
 description: "有些 icon 來讓使用者看到，易理解，然後去操作"
 ---
 
-<!-- ### hola svg，好用的svg工具. -->
+### 為什麼要用SVG
 
-在做project的時候，需要有些 icon 來讓使用者看到，易理解，然後去操作，例如箭頭、下一頁等等。這種時候用svg就非常適合，可以很容易修改顏色、大小，去符合我們要的格式。
+在做project的時候，需要有些icon來讓使用者操作，最好直覺易理解，例如箭頭、下一頁等等。這種時候用SVG就非常適合，可以很容易修改顏色、大小，去符合我們要的格式。
+
+### HOLA SVG
 
 跟大家介紹這個網頁：
 
-[hola svg](https://holasvg.com/icons/)
+[HOLA SVG](https://holasvg.com/icons/)
 
 我記得去年(2020)中下旬時第一次用它，那時候還沒有這麼多選擇，今年(2021)想要用時回去看，竟然多了好多圖案。
 
@@ -40,11 +42,13 @@ description: "有些 icon 來讓使用者看到，易理解，然後去操作"
 </div>
 ```
 
-p.s. 因為我用的是react，所以裡面所有的屬性都被改成Camel Case:
+**p.s. 因為我用的是react，所以裡面所有的屬性都被改成Camel Case**
 
 ```jsx
 stroke-width='8' -> strokeWidth='10'
 ```
+
+### 輕鬆客製化
 
 也因為code很簡單，我們也可以很容易去客製化，例如從stroke修改顏色，以及stroke-width調整寬度。
 
@@ -78,6 +82,7 @@ stroke-width='8' -> strokeWidth='10'
 	</svg>
 </div>
 ```
+### 其他資源
 
 還有一個SVG的資源 - Fontawesome 也很不錯，有很多生活化的圖案 ，不過就多了要安裝的步驟。
 
