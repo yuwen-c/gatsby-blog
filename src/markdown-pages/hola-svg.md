@@ -30,7 +30,7 @@ description: "有些 icon 來讓使用者看到，易理解，然後去操作"
 
 我把它用在我的專案裡面：
 
-```jsx
+```jsx {6}
 <div className="w-10 ml3">
 	<svg className="grow"
    fill='none' stroke='#555555' strokeWidth='10' strokeDashoffset='194' strokeDasharray='0' strokeLinecap='round' strokeLinejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'

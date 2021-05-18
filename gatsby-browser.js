@@ -12,5 +12,5 @@ import "@fontsource/noto-serif-tc/600.css"
 // https://fonts.google.com/specimen/EB+Garamond
 // https://github.com/fontsource/fontsource/tree/main/packages/eb-garamond
 
+// add theme of prismjs for code block
 import "prismjs/themes/prism-tomorrow.css"
-// require("prismjs/themes/prism-tomorrow.css")
