@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
+    `gatsby-plugin-image`, //index的image用的
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,12 +21,18 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    // `gatsby-transformer-remark`,
 
   {
-    resolve: `gatsby-transformer-remark`,
+    resolve: `gatsby-transformer-remark`,//轉markdown
     options: {
       plugins: [
+        {
+          resolve: `gatsby-remark-images`,//處理image
+          options: {
+            maxWidth: 590,
+            showCaptions: true
+          },
+        },
         {
           resolve: `gatsby-remark-prismjs`,
           options: {
@@ -95,25 +101,10 @@ module.exports = {
       ],
     },
   },
-
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.md`, `.mdx`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-        ],
-      },
-    },
+  `gatsby-plugin-sharp`, 
+  `gatsby-transformer-sharp`, 
+  `gatsby-plugin-styled-components`,
+  `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

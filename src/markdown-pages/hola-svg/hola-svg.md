@@ -57,7 +57,7 @@ strokeWidth='10'
 
 不過網站也有一個很棒的功能，在最上面可以調整寬度、顏色、圓角。
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d079b36b-8b25-4548-8e00-6e518bf7b543/holaSVG.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d079b36b-8b25-4548-8e00-6e518bf7b543/holaSVG.png)
+![holaSVG](holaSVG.png)
 
 大小的部分可以在外面包的<div>來做調整，非常容易(我設的w-10、ml3、grow是tachyons的設定，要另外安裝套件才能用。)
 
