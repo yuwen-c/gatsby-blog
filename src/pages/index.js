@@ -1,6 +1,6 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 import styled from "styled-components";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,45 +17,77 @@ const BlogTitle = styled.h1`
   color: #8FB9A8;
 `
 
-export default ({data}) => (
-  <Layout>
-    <SEO title="Home" />
-    {
-      data.allMarkdownRemark.edges.map(({node}) => {
-        return(
-          <div key={node.id}>
-          <BlogLink to={node.fields.slug}>
-            <BlogTitle>{node.frontmatter.title}</BlogTitle>
-            </BlogLink>
-            <span>{node.frontmatter.date}</span>
-            <p className="lh-copy">{node.frontmatter.description}</p>
-            {/* <p>{node.excerpt}</p> */}
-          </div>
-        )
-      })
-    }
+const Index = () => {
 
-  </Layout>
-)
-
-// sort: order the posts by descending date
-export const query = graphql`
-  query  {
-    allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}){ 
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            date
-            description
-            title
+  const data = useStaticQuery(
+    graphql`
+      query  {
+        allMarkdownRemark (sort: {fields: frontmatter___date, order: DESC}){ 
+          edges {
+            node {
+              id
+              excerpt
+              frontmatter {
+                date
+                description
+                title
+              }
+              fields {
+                slug
+              }
+            }
           }
-          fields {
-            slug
+        }
+        indexImage: file(relativePath: {eq: "yuwen-c.png"}) {
+          childImageSharp {
+            gatsbyImageData(transformOptions: {fit: COVER})
+          }
+        }
+        site {
+          siteMetadata {
+            siteUrl
           }
         }
       }
-    }
-  }
-`
+    `
+  )
+
+
+  // const imageData = data.indexImage.childImageSharp.gatsbyImageData
+
+  const imageURLOfSeo =
+    data.site.siteMetadata.siteUrl + getSrc(data.indexImage.childImageSharp)
+
+  return (
+    <Layout>
+      <SEO
+        title="Home"
+        imageURL={imageURLOfSeo}
+        pageURL="https://yuwen-c.netlify.app/"
+        isArticle={false}
+      />
+
+
+      {
+        data.allMarkdownRemark.edges.map(({ node }) => {
+          return (
+            <div key={node.id}>
+              <BlogLink to={node.fields.slug}>
+                <BlogTitle>{node.frontmatter.title}</BlogTitle>
+              </BlogLink>
+              <span>{node.frontmatter.date}</span>
+              <p className="lh-copy">{node.frontmatter.description}</p>
+              {/* <p>{node.excerpt}</p> */}
+            </div>
+          )
+        })
+      }
+
+    </Layout>)
+}
+
+export default Index;
+
+// sort: order the posts by descending date
+
+

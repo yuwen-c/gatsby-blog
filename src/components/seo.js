@@ -9,9 +9,11 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+
+const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) => {
+  const { site, siteImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,20 +23,31 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
+        siteImage: file(relativePath: { eq: "yuwen-c.png" }) {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED)
+          }
+        }
       }
     `
   )
 
+  //當blog post沒有圖片時，連結預覽會補上網站代表圖
+  const fixedSrc = site.siteMetadata.siteUrl + getSrc(siteImage.childImageSharp)
+  const metaImage = imageURL || fixedSrc
   const metaDescription = description || site.siteMetadata.description
+  // 設定在gatsby-config.js的siteMetadata裡面的title, 代表整個網站的總title
   const defaultTitle = site.siteMetadata?.title
+  const metaURL = pageURL || site.siteMetadata.siteUrl
 
   return (
+    <React.Fragment>
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={title} //index.js傳來的props, 代表首頁的title
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null} // 該頁title|總title
       meta={[
         {
           name: `description`,
@@ -47,6 +60,14 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
+          property: `og:url`,
+          content: metaURL,
         },
         {
           property: `og:type`,
@@ -70,6 +91,20 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
+    {
+        // blog post(article) or homepage(website)
+        isArticle ? (
+          <Helmet>
+            <meta property="og:type" content="article" />
+            <meta property="article:author" content="https://www.bdr.rocks" />
+          </Helmet>
+        ) : (
+          <Helmet>
+            <meta property="og:type" content="website" />
+          </Helmet>
+        )
+      }
+    </React.Fragment>
   )
 }
 

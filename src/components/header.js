@@ -2,6 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import avatar from "../images/githubAvatar.jpg";
+// import { getSrc } from "gatsby-plugin-image"
+
 
 const Header = ({ siteTitle }) => (
   <header

@@ -3,7 +3,9 @@ module.exports = {
     title: `yuwen-c`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@yuwen-c`,
+    siteUrl: `https://yuwen-c.netlify.app/`,
   },
+  //siteMatadata -> graphql -> source to query in seo.js
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`, //index的image用的
