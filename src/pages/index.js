@@ -38,7 +38,7 @@ const Index = () => {
             }
           }
         }
-        indexImage: file(relativePath: {eq: "yuwen-c.png"}) {
+        indexImage: file(relativePath: {eq: "yuwen-c_large.png"}) {
           childImageSharp {
             gatsbyImageData(transformOptions: {fit: COVER})
           }
