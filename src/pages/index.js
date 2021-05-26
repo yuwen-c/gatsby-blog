@@ -18,7 +18,7 @@ const BlogTitle = styled.h1`
 `
 
 const Index = () => {
-
+  // sort: order the posts by descending date
   const data = useStaticQuery(
     graphql`
       query  {
@@ -43,7 +43,7 @@ const Index = () => {
             gatsbyImageData(transformOptions: {fit: COVER})
           }
         }
-        site {
+        siteUrl: site {
           siteMetadata {
             siteUrl
           }
@@ -52,18 +52,18 @@ const Index = () => {
     `
   )
 
-
-  // const imageData = data.indexImage.childImageSharp.gatsbyImageData
-
+  // image for seo, single url with getSrc 
   const imageURLOfSeo =
-    data.site.siteMetadata.siteUrl + getSrc(data.indexImage.childImageSharp)
+    data.siteUrl.siteMetadata.siteUrl + getSrc(data.indexImage.childImageSharp)
+
+  const pageURL = data.siteUrl.siteMetadata.siteUrl
 
   return (
     <Layout>
       <SEO
         title="Home"
         imageURL={imageURLOfSeo}
-        pageURL="https://yuwen-c.netlify.app/"
+        pageURL={pageURL}
         isArticle={false}
       />
 
@@ -88,6 +88,6 @@ const Index = () => {
 
 export default Index;
 
-// sort: order the posts by descending date
+
 
 

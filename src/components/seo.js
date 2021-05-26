@@ -13,6 +13,7 @@ import { getSrc } from "gatsby-plugin-image"
 
 
 const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) => {
+  console.log("imageURL from seo", imageURL)
   const { site, siteImage } = useStaticQuery(
     graphql`
       query {
@@ -21,9 +22,11 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) =
             title
             description
             author
+            siteUrl
+            
           }
         }
-        siteImage: file(relativePath: { eq: "yuwen-c.png" }) {
+        siteImage: file(relativePath: { eq: "yuwen-c_large.png" }) {
           childImageSharp {
             gatsbyImageData(layout: FIXED)
           }
@@ -96,7 +99,7 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) =
         isArticle ? (
           <Helmet>
             <meta property="og:type" content="article" />
-            <meta property="article:author" content="https://www.bdr.rocks" />
+            <meta property="article:author" content={site.siteMetadata.siteUrl} />
           </Helmet>
         ) : (
           <Helmet>
