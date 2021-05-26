@@ -31,8 +31,6 @@ const Index = () => {
                 date
                 description
                 title
-              }
-              fields {
                 slug
               }
             }
@@ -72,7 +70,7 @@ const Index = () => {
         data.allMarkdownRemark.edges.map(({ node }) => {
           return (
             <div key={node.id}>
-              <BlogLink to={node.fields.slug}>
+              <BlogLink to={node.frontmatter.slug}>
                 <BlogTitle>{node.frontmatter.title}</BlogTitle>
               </BlogLink>
               <span>{node.frontmatter.date}</span>

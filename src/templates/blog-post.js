@@ -32,9 +32,10 @@ const blogPost = ({ data }) => {
 
 export default blogPost;
 
+// 從node.js傳slug變數進來
 export const query = graphql`
     query($slug: String!){
-        markdownRemark( fields: {slug: {eq: $slug}}){
+        markdownRemark( frontmatter: {slug: {eq: $slug}}){
             html
             frontmatter{
                 title
@@ -44,9 +45,7 @@ export const query = graphql`
                     }
                 }
             }
-            fields{
-                slug
-            }
+
         }
         siteUrl: site{
             siteMetadata {
