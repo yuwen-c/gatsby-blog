@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import avatar from "../images/githubAvatar.jpg"; //use static image(O)
+import { StaticImage } from "gatsby-plugin-image";
 
 const Header = ({ siteTitle }) => (
   <header
@@ -30,10 +30,11 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
     <div className="pb3">
-      <img
-      src={avatar}
-      className="br-100 h3 w3 " alt="avatar">
-      </img>
+      <StaticImage
+        className="br-100 h3 w3"
+        src="../images/githubAvatar.jpg"
+        alt="avatar"
+      />
     </div>
   </header>
 )

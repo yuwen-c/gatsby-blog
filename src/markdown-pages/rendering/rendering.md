@@ -2,6 +2,8 @@
 title: "從幾個React的相關框架比較網站技術"
 date: "2021-04-20"
 description: "最近開始學Gatsby，剛好可以用三個React相關的框架—Create react app, Next.js, Gatsby.js—來解釋靜態/ 動態網站、client side render/ server side render這幾個名詞。"
+slug: "rendering"
+featuredImage: "gatsby-astronaut.png"
 ---
 
 

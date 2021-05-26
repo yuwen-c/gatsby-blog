@@ -2,6 +2,7 @@
 title: "HOLA SVG，好用的SVG工具"
 date: "2021-04-10"
 description: "有些 icon 來讓使用者看到，易理解，然後去操作"
+slug: "holasvg"
 featuredImage: holaSVG.png
 ---
 
