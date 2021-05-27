@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 
 
-const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) => {
+const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle, date}) => {
   const { site, siteImage } = useStaticQuery(
     graphql`
       query {
@@ -22,7 +22,6 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) =
             description
             author
             siteUrl
-            
           }
         }
         siteImage: file(relativePath: { eq: "yuwen-c_large.png" }) {
@@ -34,6 +33,7 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) =
     `
   )
 
+  // the query here is mainly default metadata
   //當blog post沒有圖片時，連結預覽會補上網站代表圖
   const fixedSrc = site.siteMetadata.siteUrl + getSrc(siteImage.childImageSharp)
   const metaImage = imageURL || fixedSrc
@@ -99,6 +99,7 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) =
           <Helmet>
             <meta property="og:type" content="article" />
             <meta property="article:author" content={site.siteMetadata.siteUrl} />
+            <meta property="og:article:published_time" content={date} />
           </Helmet>
         ) : (
           <Helmet>

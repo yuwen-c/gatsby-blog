@@ -26,6 +26,7 @@ const blogPost = ({ data }) => {
                 date={date}
             />
             <BlogTitle>{title}</BlogTitle>
+            <p>{date}</p>
             <div className="lh-copy" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
         </Layout>
     )
