@@ -50,37 +50,32 @@ const Index = () => {
     `
   )
 
+  const {siteUrl} = data.siteUrl.siteMetadata;
   // image for seo, single url with getSrc 
-  const imageURLOfSeo =
-    data.siteUrl.siteMetadata.siteUrl + getSrc(data.indexImage.childImageSharp)
-
-  const pageURL = data.siteUrl.siteMetadata.siteUrl
+  const imageURLOfSeo = siteUrl + getSrc(data.indexImage.childImageSharp)
 
   return (
     <Layout>
       <SEO
         title="Home"
         imageURL={imageURLOfSeo}
-        pageURL={pageURL}
+        pageURL={siteUrl}
         isArticle={false}
       />
-
-
       {
         data.allMarkdownRemark.edges.map(({ node }) => {
+          const {date, description, title, slug} = node.frontmatter;
           return (
             <div key={node.id}>
-              <BlogLink to={node.frontmatter.slug}>
-                <BlogTitle>{node.frontmatter.title}</BlogTitle>
+              <BlogLink to={slug}>
+                <BlogTitle>{title}</BlogTitle>
               </BlogLink>
-              <span>{node.frontmatter.date}</span>
-              <p className="lh-copy">{node.frontmatter.description}</p>
-              {/* <p>{node.excerpt}</p> */}
+              <span>{date}</span>
+              <p className="lh-copy">{description}</p>
             </div>
           )
         })
       }
-
     </Layout>)
 }
 

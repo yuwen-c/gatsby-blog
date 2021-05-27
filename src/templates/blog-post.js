@@ -27,7 +27,6 @@ const blogPost = ({ data }) => {
             <BlogTitle>{title}</BlogTitle>
             <div className="lh-copy" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
         </Layout>
-
     )
 }
 
