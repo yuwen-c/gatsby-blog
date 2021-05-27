@@ -3,7 +3,7 @@ title: "從幾個React相關框架比較動態/靜態網站及Rendering"
 date: "2021-04-20"
 description: "最近開始學Gatsby，剛好可以用3個React相關的框架 — Create-react-app, Next.js, Gatsby.js — 來解釋幾個名詞。"
 slug: "2021-04-static-dynamic-website-and-rendering"
-featuredImage: "gatsby-astronaut.png"
+featuredImage: gatsby-astronaut.png
 ---
 
 ![gastby太空人](gatsby-astronaut.png)

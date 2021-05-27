@@ -3,7 +3,7 @@ title: "從零開始建立LinkedIn個人檔案"
 date: "2021-05-23"
 description: "因為開始找工作，需要有個「線上的名片」，於是開始逐步建立自己的LinkedIn檔案。"
 slug: "2021-05-build-your-linkedIn-file"
-featuredImage: "linkedin.png"
+featuredImage: linkedin.png
 ---
 
 ![LinkedIn](linkedin.png)
