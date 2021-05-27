@@ -11,7 +11,7 @@ const BlogTitle = styled.h1`
 `
 const blogPost = ({ data }) => {
 
-    const {slug, title, featuredImage, date} = data.markdownRemark.frontmatter;
+    const {slug, title, description, featuredImage, date} = data.markdownRemark.frontmatter;
     const {siteUrl} = data.siteUrl.siteMetadata;
     const imageURLOfSeo = siteUrl + getSrc(featuredImage.childImageSharp)
     const pageUrl = siteUrl + slug;
@@ -21,6 +21,7 @@ const blogPost = ({ data }) => {
             <SEO
                 title={title}
                 imageURL={imageURLOfSeo}
+                description={description}
                 pageURL={pageUrl}
                 isArticle={true}
                 date={date}
@@ -43,6 +44,7 @@ export const query = graphql`
                 date
                 slug
                 title
+                description
                 featuredImage {
                     childImageSharp {
                       gatsbyImageData(layout: FIXED)

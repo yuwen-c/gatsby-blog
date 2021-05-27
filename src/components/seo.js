@@ -38,7 +38,6 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle, dat
   const fixedSrc = site.siteMetadata.siteUrl + getSrc(siteImage.childImageSharp)
   //當blog post沒有圖片時(沒有傳來imageURL)，連結預覽會補上網站代表圖(fixedSrc)
   const metaImage = imageURL || fixedSrc
-  console.log("metaImag", metaImage)
   const metaDescription = description || site.siteMetadata.description
   // 設定在gatsby-config.js的siteMetadata裡面的title, 代表整個網站的總title
   const defaultTitle = site.siteMetadata?.title
