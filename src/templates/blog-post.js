@@ -10,9 +10,9 @@ const BlogTitle = styled.h1`
   color: #8FB9A8;
 `
 const blogPost = ({ data }) => {
+
     const {slug, title, featuredImage, date} = data.markdownRemark.frontmatter;
     const {siteUrl} = data.siteUrl.siteMetadata;
-
     const imageURLOfSeo = siteUrl + getSrc(featuredImage.childImageSharp)
     const pageUrl = siteUrl + slug;
 
