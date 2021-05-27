@@ -24,7 +24,7 @@ const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle, dat
             siteUrl
           }
         }
-        siteImage: file(relativePath: { eq: "yuwen-c_large.png" }) {
+        siteImage: file(relativePath: { eq: "yuwen-c.png" }) {
           childImageSharp {
             gatsbyImageData(layout: FIXED)
           }
