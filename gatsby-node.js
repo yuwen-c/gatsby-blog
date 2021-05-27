@@ -26,7 +26,6 @@ exports.createPages = ({graphql, actions}) => {
     `)
     .then(result => { // loop through all the markdown files
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
-          console.log(JSON.stringify(node))
             createPage({
                 path: node.frontmatter.slug,
                 // manually create the page using blog-post template

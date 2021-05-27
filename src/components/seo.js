@@ -13,7 +13,6 @@ import { getSrc } from "gatsby-plugin-image"
 
 
 const SEO = ({ description, lang, meta, title, imageURL, pageURL, isArticle }) => {
-  console.log("imageURL from seo", imageURL)
   const { site, siteImage } = useStaticQuery(
     graphql`
       query {
