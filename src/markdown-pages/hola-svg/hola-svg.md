@@ -3,7 +3,7 @@ title: "HOLA SVG，好用的SVG工具"
 date: "2021-04-10"
 description: "在做project的時候，常常需要有些icon來讓使用者操作，最好直覺易理解"
 slug: "2021-04-holasvg"
-featuredImage: HOLASVG.png
+featuredImage: HOLA_SVG.png
 ---
 
 ## 什麼時候會用到SVG
@@ -14,7 +14,7 @@ featuredImage: HOLASVG.png
 
 跟大家介紹一個好用的網頁[HOLA SVG](https://holasvg.com/icons/):
 
-![HOLA SVG 畫面](HOLASVG.png)
+![HOLA SVG 畫面](HOLA_SVG.png)
 
 我記得去年(2020)中下旬時第一次用它，那時候還沒有這麼多選擇，今年(2021)想要用時回去看，竟然多了好多圖案。
 
@@ -63,7 +63,7 @@ strokeWidth='10'
 
 不過網站也有一個很棒的功能，在最上面可以調整寬度、顏色、圓角。
 
-![HOLA SVG 上方的調整bar](holaSVG_bar.png)
+![HOLA SVG 上方的調整bar](HOLA_SVG_bar.png)
 
 大小的部分可以在外面包```<div>```來做調整，非常容易(我設的w-10、ml3、grow是tachyons的設定，要另外安裝套件才能用。)
 
