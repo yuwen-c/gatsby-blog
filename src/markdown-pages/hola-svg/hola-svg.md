@@ -3,7 +3,7 @@ title: "HOLA SVG，好用的SVG工具"
 date: "2021-04-10"
 description: "在做project的時候，常常需要有些icon來讓使用者操作，最好直覺易理解"
 slug: "2021-04-holasvg"
-featuredImage: HOLASVG.png
+featuredImage: "HOLASVG.png"
 ---
 
 ## 什麼時候會用到SVG
