@@ -10,7 +10,7 @@ const BlogTitle = styled.h1`
   color: #8FB9A8;
 `
 const blogPost = ({ data }) => {
-    const {slug, title, featuredImage} = data.markdownRemark.frontmatter;
+    const {slug, title, featuredImage, date} = data.markdownRemark.frontmatter;
     const {siteUrl} = data.siteUrl.siteMetadata;
 
     const imageURLOfSeo = siteUrl + getSrc(featuredImage.childImageSharp)
@@ -23,6 +23,7 @@ const blogPost = ({ data }) => {
                 imageURL={imageURLOfSeo}
                 pageURL={pageUrl}
                 isArticle={true}
+                date={date}
             />
             <BlogTitle>{title}</BlogTitle>
             <div className="lh-copy" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
@@ -38,6 +39,7 @@ export const query = graphql`
         markdownRemark( frontmatter: {slug: {eq: $slug}}){
             html
             frontmatter{
+                date
                 slug
                 title
                 featuredImage {

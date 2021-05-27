@@ -1,26 +1,26 @@
 ---
 title: "HOLA SVG，好用的SVG工具"
 date: "2021-04-10"
-description: "有些 icon 來讓使用者看到，易理解，然後去操作"
-slug: "holasvg"
+description: "在做project的時候，常常需要有些icon來讓使用者操作，最好直覺易理解"
+slug: "2021-04-holasvg"
 featuredImage: HOLASVG.png
 ---
 
-### 什麼時候會用到SVG
+## 什麼時候會用到SVG
 
-在做project的時候，需要有些icon來讓使用者操作，最好直覺易理解，例如箭頭、下一頁等等。這種時候用SVG就非常適合，圖案簡單，又可以很容易修改顏色、大小，去符合我們要的格式。
+在做project的時候，常常需要有些icon來讓使用者操作，最好直覺易理解，例如箭頭、下一頁等等。這種時候用SVG就非常適合，圖案簡單，又可以很容易修改顏色、大小，去符合我們要的格式。
 
-### HOLA SVG
+## HOLA SVG
 
 跟大家介紹一個好用的網頁[HOLA SVG](https://holasvg.com/icons/):
 
-![HOLASVG](HOLASVG.png)
+![HOLA SVG 畫面](HOLASVG.png)
 
 我記得去年(2020)中下旬時第一次用它，那時候還沒有這麼多選擇，今年(2021)想要用時回去看，竟然多了好多圖案。
 
 當時我把它應用在我的[worldtime](https://yuwen-worldtime-luxon.netlify.app/)專案裡面，圓形的加號、減號，及一個往上的指數符號。
 
-![worldtime](worldtime.png)
+![worldtime 畫面](worldtime_screenshot.png)
 
 以加號為例：
 
@@ -57,17 +57,17 @@ strokeWidth='10'
 ```
 
 
-### 輕鬆客製化
+## 輕鬆客製化
 
 因為code很簡單，我們也可以很容易去客製化，例如從stroke修改顏色，以及stroke-width調整寬度。
 
 不過網站也有一個很棒的功能，在最上面可以調整寬度、顏色、圓角。
 
-![holaSVG_bar](holaSVG_bar.png)
+![HOLA SVG 上方的調整bar](holaSVG_bar.png)
 
-大小的部分可以在外面包的```<div>```來做調整，非常容易(我設的w-10、ml3、grow是tachyons的設定，要另外安裝套件才能用。)
+大小的部分可以在外面包```<div>```來做調整，非常容易(我設的w-10、ml3、grow是tachyons的設定，要另外安裝套件才能用。)
 
-另外，圖形本身還可以做小小的改造：我需要一個往上移動的icon，我挑了Hola SVG的start up：
+另外，圖形本身還可以做小小的改造：我需要一個往上移動的icon，我挑了start up符號：
 
 ```jsx
 <svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
@@ -91,11 +91,11 @@ strokeWidth='10'
 	</svg>
 </div>
 ```
-### 其他資源
+## 其他資源
 
 還有一個SVG的資源 - [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2&q=up) 也很不錯，有很多生活化的圖案 ，不過就多了要安裝的步驟。
 
 
-如果要用的icon數量不多，又是簡單的指令式實用圖形，那很推薦用這個HolaSVG，作者Mariana Beldi是來自阿根廷的平面設計師、UI/UX工程師，有興趣可以去他個人網站逛逛：
+如果要用的icon數量不多，又是簡單的指令式實用圖形，那很推薦用這個HOLA SVG，作者Mariana Beldi是來自阿根廷的平面設計師、UI/UX工程師，有興趣可以去他個人網站逛逛：
 
 [Hola Belda](https://www.holabelda.com/)
