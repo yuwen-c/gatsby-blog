@@ -10,21 +10,22 @@ const BlogTitle = styled.h1`
   color: #8FB9A8;
 `
 const blogPost = ({ data }) => {
-    const post = data.markdownRemark
+    const {slug, title, featuredImage} = data.markdownRemark.frontmatter;
+    const {siteUrl} = data.siteUrl.siteMetadata;
 
-    const imageURLOfSeo =
-    data.siteUrl.siteMetadata.siteUrl + getSrc(post.frontmatter.featuredImage.childImageSharp)
+    const imageURLOfSeo = siteUrl + getSrc(featuredImage.childImageSharp)
+    const pageUrl = siteUrl + slug;
 
     return (
         <Layout>
             <SEO
-                title={post.frontmatter.title}
+                title={title}
                 imageURL={imageURLOfSeo}
-                pageURL={data.siteUrl.siteMetadata.siteUrl}
+                pageURL={pageUrl}
                 isArticle={true}
             />
-            <BlogTitle>{post.frontmatter.title}</BlogTitle>
-            <div className="lh-copy" dangerouslySetInnerHTML={{ __html: post.html }}></div>
+            <BlogTitle>{title}</BlogTitle>
+            <div className="lh-copy" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
         </Layout>
 
     )
@@ -32,12 +33,13 @@ const blogPost = ({ data }) => {
 
 export default blogPost;
 
-// 從node.js傳slug變數進來
+// 不用useStaticQuery, 因為要利用 "從node.js傳來的slug變數" 叫出那一篇post
 export const query = graphql`
     query($slug: String!){
         markdownRemark( frontmatter: {slug: {eq: $slug}}){
             html
             frontmatter{
+                slug
                 title
                 featuredImage {
                     childImageSharp {
