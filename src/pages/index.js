@@ -52,7 +52,7 @@ const Index = () => {
 
   const {siteUrl} = data.siteUrl.siteMetadata;
   // image for seo, single url with getSrc 
-  const imageURLOfSeo = siteUrl + getSrc(data.indexImage.childImageSharp)
+  const imageURLOfSeo = siteUrl + getSrc(data.indexImage.childImageSharp);
 
   return (
     <Layout>
@@ -67,7 +67,7 @@ const Index = () => {
           const {date, description, title, slug} = node.frontmatter;
           return (
             <div key={node.id}>
-              <BlogLink to={slug}>
+              <BlogLink to={`/${slug}/`}>
                 <BlogTitle>{title}</BlogTitle>
               </BlogLink>
               <span>{date}</span>

@@ -3,7 +3,7 @@ module.exports = {
     title: `yuwen-c`,
     description: `yuwen-c's blog`,
     author: `@yuwen-c`,
-    siteUrl: `https://yuwen-c.netlify.app/`,
+    siteUrl: `https://yuwen-c.netlify.app`,
   },
   //siteMatadata -> graphql -> source to query in seo.js
   plugins: [
