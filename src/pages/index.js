@@ -67,7 +67,7 @@ const Index = () => {
           const {date, description, title, slug} = node.frontmatter;
           return (
             <div key={node.id}>
-              <BlogLink to={`/${slug}/`}>
+              <BlogLink to={`/${slug.toLowerCase()}/`}>
                 <BlogTitle>{title}</BlogTitle>
               </BlogLink>
               <span>{date}</span>
