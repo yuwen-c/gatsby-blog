@@ -50,7 +50,7 @@ featuredImage: readme.png
 
 - Meet.jobs
 
-沒有自己的履歷版面，是用填資料＋上傳的方式，可以自己上傳客製化pdf，有欄位可以放作品集連結。
+沒有自己的履歷版面，是用填資料 + 上傳的方式，可以自己上傳客製化pdf，有欄位可以放作品集連結。
 他們有時候會辦線上面試，集合多家公司在同一天舉行，可以注意他們的臉書。
 另外比較特別的是，如果從這邊求職，並且去上班的話，可以領取祝賀金100美金。
 
@@ -60,17 +60,18 @@ featuredImage: readme.png
 
 - Appworks
 
-這邊無法投遞，他們是跟yourator合作的，投遞要到yourator。不過這邊可以看到很多[新創公司的介紹]((https://appworks.yourator.co/jobs?page=1))，有興趣的人可以參考。
+這邊無法投遞，他們是跟yourator合作的，投遞要到yourator。不過這邊可以看到很多[新創公司的介紹](https://appworks.yourator.co/blogs?page=1)，有興趣的人可以參考。
 
 
 ## Github
 
 ### 個人頁面設定
 
+- 編輯頭像旁的自我介紹：Edit profile，我是簡單寫上web developer、frontend developer，加上email、地點。
+
 [我的Github頁面](https://github.com/yuwen-c)
 
-- Edit profile，我是簡單寫上web developer、frontend developer，加上email、地點。
-- README.md：這部分可參考[官方文件](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)，加上去之後會在你的github首頁顯示自我介紹。
+- 編輯個人的README.md：這部分可參考[官方文件](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)，加上去之後會在你的github首頁顯示自我介紹。
 
 這邊推薦一個好用的工具：
 [github readme generator](https://github.com/rahuldkjain/github-profile-readme-generator)
@@ -93,7 +94,7 @@ featuredImage: readme.png
 **為何要使用一樣工具，我覺得常常是初學者忽略的地方，也是senior工程師在解決問題時會有的思考點**
 
 另外，為了幫助讀者理解，我還搭配流程圖，流程圖是用[Draw.io](https://app.diagrams.net/)做的。
-另外，考量到我的求職地點在中文區，所以我做了中英兩個版本，可以參考：
+另外，考量到我的求職地點在中文區，所以我做了中英兩個版本。可以參考：
 
 [Dieta減重app的中文介紹](https://github.com/yuwen-c/dieta/blob/master/README_Mandarin.md)
 
@@ -104,7 +105,7 @@ featuredImage: readme.png
 
 ## portfolio，作品集入口網站
 
-- 用一個網站，整合履歷和作品，我覺得也是不錯的方式。我的portfolio模板是用這位ZTM同學的，裡面夾了我的A4萬用履歷，跟各個作品的實際操作連結、github連結。
+- 用一個網站，整合履歷和作品，我覺得也是不錯的方式。我的portfolio模板是用這位ZTM同學的專案 - simplefolio，裡面夾了我的A4萬用履歷，跟各個作品的實際操作連結、github連結。
 
 [simplefolio](https://github.com/cobidev/simplefolio)
 
