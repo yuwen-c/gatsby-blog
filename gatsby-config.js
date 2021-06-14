@@ -100,6 +100,22 @@ module.exports = {
             escapeEntities: {},
           },
         },
+        {
+          resolve: `gatsby-remark-classes`,
+          options: {
+            classMap: {
+              "heading[depth=1]": "title",
+              "heading[depth=2]": "subtitle",
+              "heading[depth=3]": "f4 ",
+              paragraph: "para f4",
+              listItem: "f4",
+              "listItem > paragraph": "",
+              blockquote:"",
+              link: "",
+
+            }
+          }
+        }
       ],
     },
   },
