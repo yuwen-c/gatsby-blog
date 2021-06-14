@@ -13,7 +13,7 @@ featuredImage: readme.png
 
 我原本以為履歷寫一份就好，但後來發現，各個求職平台都會有自己的格式，不一定能用自己準備好的履歷投遞，雖然內容都差不多，但真的得花些時間準備。
 
-- A4萬用版。
+### A4萬用版
 
 我是參考這篇文章寫成的：
 
@@ -28,17 +28,17 @@ featuredImage: readme.png
 [模板](https://blog.pragmaticengineer.com/the-pragmatic-engineers-resume-template/)也是前面那篇文章的作者提供的。
 
 
-- cakeresume
+### Cakeresume
 
 這個求職平台可以展示自己作品，也可以產生圖文並茂的履歷。另外，如先前所說，最重要、最相關的內容往前放，cakeresume也允許使用者調整項目順序，不相關的工作經驗往後放。
 
 **小提醒：作品最好背景不要是白色的，否則螢幕截圖印在履歷上，會看不出邊界，效果不好**
 
-- yourator
+### Yourator
 
 可以自行調整履歷上的項目順序，但投遞時，無法自行上傳客製化的版本，這點我比較不喜歡，我會另外去找該公司有沒有在其他平台刊登職缺，使用別種管道投遞。
 
-- 104
+### 104
 
 104前陣子改版了！允許使用者調整順序，也可以上傳作品圖片，只是最後的履歷成品，會強制在履歷最上方顯示上一份工作職稱，對轉行求職者比較不友善一些些。
 
@@ -46,19 +46,21 @@ featuredImage: readme.png
 
 ## 其它求職、或讓自己曝光的平台
 
-- LinkedIn，建立個人檔案、加聯絡人....，這部分可以參考我之前的[從零開始建立LinkedIn個人檔案](/2021-05-build-your-linkedin-profile/)
+### LinkedIn
 
-- Meet.jobs
+建立個人檔案、加聯絡人，這部分可以參考我之前的[從零開始建立LinkedIn個人檔案](/2021-05-build-your-linkedin-profile/)
 
-沒有自己的履歷版面，是用填資料 + 上傳的方式，可以自己上傳客製化pdf，有欄位可以放作品集連結。
+### Meet.jobs
+
+這邊沒有自己的履歷版面，是用填資料 + 上傳的方式，可以自己上傳客製化pdf，有欄位可以放作品集連結。
 他們有時候會辦線上面試，集合多家公司在同一天舉行，可以注意他們的臉書。
 另外比較特別的是，如果從這邊求職，並且去上班的話，可以領取祝賀金100美金。
 
-- Teamdoor
+### Teamdoor
 
 這邊只提供給公司應徵使用，使用者不需要註冊帳號、建立履歷，看到有興趣的職缺，直接點應徵，可以選擇自己填寫，或是選擇匯入yourator的資料。
 
-- Appworks
+### Appworks
 
 這邊無法投遞，他們是跟yourator合作的，投遞要到yourator。不過這邊可以看到很多[新創公司的介紹](https://appworks.yourator.co/blogs?page=1)，有興趣的人可以參考。
 
@@ -73,19 +75,17 @@ featuredImage: readme.png
 
 - 編輯個人的README.md：這部分可參考[官方文件](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)，加上去之後會在你的github首頁顯示自我介紹。
 
-這邊推薦一個好用的工具：
+這邊推薦一個好用的工具，可以幫你完成一個簡單的自我介紹，並且把會的技術的icon顯示出來：
 [github readme generator](https://github.com/rahuldkjain/github-profile-readme-generator)
 
-可以幫你完成一個簡單的自我介紹，並且把會的技術的icon顯示出來，像是這樣：
+像是這樣：
 
 ![README.md](readme.png)
 
 - pin repo：可以把想展示的repo固定在上面，最多6個。
 - 除了pin，別忘記去編輯該repo的介紹，會顯示在pin的欄位。
 
-### 詳細介紹個人作品
-
-- 作品的README：詳細地介紹你的project。
+### 詳細介紹個人作品 - README.md
 
 想像人資、技術主管一天要看多少人的履歷、作品，如何讓他們無痛的了解你做了什麼、有什麼技術，我是抱著這樣的心態做這個。
 
@@ -100,12 +100,12 @@ featuredImage: readme.png
 
 這真的是一個不小的工程，但過程中我發現，這也等於是一面在幫我準備面試時要如何介紹這個project。
 
-- emoji: 有看過以上範例的人可能會發現我很愛用emoji，我覺得看起來比較活潑，不過這部分就視個人風格選擇囉。
+有看過以上範例的人可能會發現我很愛用emoji，我覺得看起來比較活潑，不過這部分就視個人風格選擇囉。
 
 
 ## portfolio，作品集入口網站
 
-- 用一個網站，整合履歷和作品，我覺得也是不錯的方式。我的portfolio模板是用這位ZTM同學的專案 - simplefolio，裡面夾了我的A4萬用履歷，跟各個作品的實際操作連結、github連結。
+用一個網站，整合履歷和作品，我覺得也是不錯的方式。我的portfolio模板是用一位[ZTM](https://zerotomastery.io/)同學的專案 - simplefolio，裡面夾了我的A4萬用履歷，跟各個作品的實際操作連結、github連結：
 
 [simplefolio](https://github.com/cobidev/simplefolio)
 
