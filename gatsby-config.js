@@ -111,7 +111,7 @@ module.exports = {
               listItem: "f4",
               "listItem > paragraph": "",
               strong: "f5",
-              blockquote: "",
+              blockquote: "pl4 ml0 bl b--green bw2",
               link: "no-underline",
 
             }
