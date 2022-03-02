@@ -1,16 +1,17 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#765D69`,
+      // background: `#765D69`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div className="pv3"
+    <div
+      className="pv3"
       style={{
         margin: `0 auto`,
         maxWidth: 960,
